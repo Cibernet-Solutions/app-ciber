@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "app-ciber",
+    "name": "Biosaude",
     "slug": "app-ciber",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -17,13 +17,29 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "br.com.cibernetsolutions.biosaudeteste",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Precisamos que seu microfone esteja habilitado para você poder se comunicar com o médico através de áudio.",
+        "NSCameraUsageDescription": "Precisamos que seu microfone esteja habilitado para você poder se comunicar com o médico através de vídeo."
+      }
     },
     "android": {
+      "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "br.com.cibernetsolutions.biosaudeteste",
+      "permissions": [
+        "READ_PHONE_STATE",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS",
+        "INTERNET"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
