@@ -5,17 +5,24 @@ import { WebView } from 'react-native-webview';
 import { Camera } from 'expo-camera'
 import { Audio } from 'expo-av'
 import { ActivityIndicator } from 'react-native';
-import { url } from './constants';
+import { url, urlHomologacao, urlProducao } from './constants';
+
 
 export default function App() {
 
   const webViewRef = useRef(null)
-  const Spinner = () => (
-    <View style={styles.activityContainer}>
-      <ActivityIndicator size="large" color="#f29900" />
-    </View>
-  );
 
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [webViewRef]);
+
+  function scrollToBottom() {
+    webViewRef.current?.injectJavaScript('some JavaScript');
+  };
+
+
+  
   useEffect(() => {
     (async () => {
 
@@ -52,6 +59,8 @@ export default function App() {
         useWebKit
         originWhitelist={["*"]}
         mediaPlaybackRequiresUserAction={false}
+        ref={webViewRef}
+
 
       />
     </View>

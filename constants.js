@@ -1,2 +1,5 @@
-export const url = "https://homologacao.cibernetsolutions.com.br/geral/app/mobile/login.cshtml";
-/*"http://medsysnet.biosaude.med.br/medsysnetapp/mobile/login";*/
+import { URL } from '@env';
+const ramdom =  Math.floor(Math.random() * (10000 - 1 )) + 1;
+
+export const url = `${URL}?id=x${ramdom}`;
+    
