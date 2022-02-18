@@ -11,6 +11,8 @@ import { url, urlHomologacao, urlProducao } from './constants';
 export default function App() {
 
   const webViewRef = useRef(null)
+  const [hasPermission, setHasPermission] = useState(null);
+
 
 
   useEffect(() => {
@@ -22,15 +24,17 @@ export default function App() {
   };
 
 
-  
   useEffect(() => {
     (async () => {
-
-      await Audio.requestPermissionsAsync();
-      await Camera.requestCameraPermissionsAsync();
-
+    
+      const allGranted = await Promise.all([Camera.requestCameraPermissionsAsync(), Camera.requestMicrophonePermissionsAsync()]).then((results) => results.every((result) => result.granted)); 
+      setHasPermission(allGranted);
     })();
   }, []);
+
+
+
+
   useEffect(() => {
     const backAction = () => {
       webViewRef.current.goBack();
@@ -41,6 +45,16 @@ export default function App() {
 
     return () => backHandler.remove();
   }, []);
+
+
+  if (!hasPermission) {
+    return (
+      <View>
+        <Text>Grant Permission first</Text>
+      </View>
+    );
+  }
+
 
 
   return (

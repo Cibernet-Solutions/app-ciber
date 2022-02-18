@@ -1,7 +1,7 @@
 import { URL } from '@env';
-const id =  Math.floor(Math.random() * (10000 - 1 )) + 1;
+const random =  Math.floor(Math.random() * (10000 - 1 )) + 1;
 
-export const url = `${URL}?id=x${id}`;
+export const url = `https://medsysnet.biosaude.med.br/MedsysnetApp/Mobile/Login?id=x${random}`;
 
 
 
