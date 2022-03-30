@@ -2,7 +2,7 @@
   "expo": {
     "name": "Biosaude",
     "slug": "app-ciber",
-    "version": "1.1.0",
+    "version": "1.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -17,11 +17,11 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "br.com.cibernetsolutions.biosaudeteste",
+      "bundleIdentifier": "com.companyname2.BioSaude",
       "supportsTablet": true,
       "infoPlist": {
-        "NSMicrophoneUsageDescription": "Precisamos que seu microfone esteja habilitado para você poder se comunicar com o médico através de áudio.",
-        "NSCameraUsageDescription": "Precisamos que seu microfone esteja habilitado para você poder se comunicar com o médico através de vídeo."
+        "NSMicrophoneUsageDescription": "Para realização de consultas médicas online e para que você possa conversar com o médico, precisamos que seu microfone esteja habilitado",
+        "NSCameraUsageDescription": "Para realização de consultas médicas online e para que você possa ver e ser visto pelo médico, precisamos que sua câmera esteja habilitada."
       }
     },
     "android": {
@@ -30,7 +30,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "br.com.cibernetsolutions.biosaudeteste",
+      "package": "com.companyname2.BioSaude",
       "permissions": [
         "READ_PHONE_STATE",
         "CAMERA",

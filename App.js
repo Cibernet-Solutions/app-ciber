@@ -3,9 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Text, View, StyleSheet, BackHandler } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Camera } from 'expo-camera'
-import { Audio } from 'expo-av'
-import { ActivityIndicator } from 'react-native';
-import { url, urlHomologacao, urlProducao } from './constants';
+import { url } from './constants';
 
 
 export default function App() {
